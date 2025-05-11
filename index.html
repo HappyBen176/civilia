@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>🌈 Civilia • Kawaii Minecraft Server ✨</title>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&family=Poppins:wght@400;700&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --pink: #ffb3c6;
+            --blue: #bde0fe;
+            --yellow: #fff3b0;
+            --purple: #cdb4db;
+            --gradient: linear-gradient(90deg,
+                    #ffb3c6 0%,
+                    #ffd6a5 20%,
+                    #fdffb6 40%,
+                    #caffbf 60%,
+                    #bde0fe 80%,
+                    #cdb4db 100%);
+
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Nunito', 'Comic Sans MS', cursive;
+            background: var(--gradient);
+            background-size: 200% 200%;
+            animation: gradientAnimation 10s linear infinite;
+            color: #4a4a4a;
+        }
+
+        @keyframes gradientAnimation {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        header {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(5px);
+            padding: 1rem 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            border-radius: 0 0 15px 15px;
+        }
+
+        header img.logo {
+            height: 80px;
+            filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.1));
+            transition: transform 0.3s ease;
+        }
+
+        header img.logo:hover {
+            transform: rotate(-5deg) scale(1.1);
+        }
+
+        nav a {
+            margin: 0 1.5rem;
+            color: #ff85a2;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.1rem;
+            padding: 8px 15px;
+            border-radius: 30px;
+            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            background: rgba(255, 255, 255, 0.7);
+        }
+
+        nav a:hover {
+            background: #ff85a2;
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(255, 133, 162, 0.4);
+        }
+
+        .hero {
+            text-align: center;
+            padding: 6rem 1rem;
+            margin: 2rem;
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 20px;
+            backdrop-filter: blur(5px);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            border: 2px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .description {
+            max-width: 700px;
+            margin: 2rem auto;
+            font-size: 1.2rem;
+            line-height: 1.6;
+            color: #666;
+        }
+
+        .address {
+            font-size: 1.8rem;
+            margin-top: 2rem;
+            position: relative;
+        }
+
+        .address code {
+            background: white;
+            border: 3px dashed #ff85a2;
+            padding: 1rem 2rem;
+            cursor: pointer;
+            display: inline-block;
+            user-select: all;
+            border-radius: 15px;
+            font-family: 'Poppins', sans-serif;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(255, 133, 162, 0.2);
+        }
+
+        .address code:hover {
+            transform: scale(1.05);
+            background: #fff0f3;
+            animation: bounce 0.5s ease;
+        }
+
+        @keyframes bounce {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-5px);
+            }
+        }
+
+        .screenshots,
+        .video,
+        .help-rules {
+            margin: 3rem auto;
+            padding: 2.5rem;
+            background: rgba(255, 255, 255, 0.85);
+            border-radius: 20px;
+            width: 90%;
+            max-width: 1000px;
+            backdrop-filter: blur(5px);
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+        }
+
+        h1,
+        h2 {
+            font-family: 'Poppins', sans-serif;
+            color: #ff85a2;
+            text-shadow: 2px 2px 0px rgba(255, 255, 255, 0.8);
+            margin-bottom: 1.5rem;
+        }
+
+        h2::before {
+            content: '🌸 ';
+        }
+
+        h2::after {
+            content: ' 🌸';
+        }
+
+        .command-list code {
+            background: white;
+            padding: 0.5rem 1rem;
+            margin: 0.5rem;
+            border-radius: 10px;
+            border: 2px solid #ffb3c6;
+            font-family: 'Poppins', monospace;
+            display: inline-block;
+            transition: all 0.2s ease;
+        }
+
+        .command-list code:hover {
+            background: #fff0f3;
+            transform: scale(1.05);
+            box-shadow: 0 4px 10px rgba(255, 179, 198, 0.3);
+        }
+
+        footer {
+            background: rgba(255, 255, 255, 0.9);
+            color: #ff85a2;
+            padding: 2rem;
+            margin-top: 4rem;
+            text-align: center;
+            font-weight: bold;
+            border-radius: 15px 15px 0 0;
+            box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        footer::before {
+            content: '✨ ';
+        }
+
+        footer::after {
+            content: ' ✨';
+        }
+
+        /* Y2K Glossy Effects */
+        .glossy {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .glossy::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(45deg,
+                    rgba(255, 255, 255, 0) 30%,
+                    rgba(255, 255, 255, 0.4) 50%,
+                    rgba(255, 255, 255, 0) 70%);
+            transform: rotate(30deg);
+            animation: gloss 4s infinite;
+        }
+
+        @keyframes gloss {
+            0% {
+                transform: translateX(-100%) rotate(30deg);
+            }
+
+            100% {
+                transform: translateX(100%) rotate(30deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="glossy">
+        <img src="kawaii_logo.webp" alt="🌈 Civilia Logo" class="logo" />
+        <nav>
+            <a href="#help">🩷 Help Center</a>
+            <a href="#rules">📜 Server Rules</a>
+            <a href="#screenshots">🎴 Screenshots</a>
+            <a href="#video">🎥 Videos</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Welcome to Civilia! 🌈✨</h1>
+        <p class="description">
+            Civilia is a kawaii-themed Minecraft server where creativity meets community. Join us for a magical
+            experience filled with fun, friendship, and endless adventures! 🏰🌸
+        </p>
+        <div class="address">
+            <code>play.civilia.online</code>
+        </div>
+    </section>
+
+    <section id="screenshots" class="screenshots">
+        <h2>Screenshots</h2>
+        <p>Take a peek at some of the amazing builds and landscapes from our server! 🖼️</p>
+        <img src="img1.png" alt="Screenshot 1" style="width: 100%; border-radius: 15px; margin-bottom: 1rem;">
+        <img src="img2.png" alt="Screenshot 2" style="width: 100%; border-radius: 15px;">
+    </section>
+
+    <section id="video" class="video">
+        <h2>Videos</h2>
+        <p>Watch our server in action! 🎥</p>
+        <iframe width="100%" height="315" src="https://www.youtube.com/embed/example" title="Civilia Video"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen style="border-radius: 15px;"></iframe>
+    </section>
+
+    <section id="help" class="help-rules">
+        <div class="faq">
+            <h2 class="title pink bold">Frequently Asked Questions</h2>
+            <p class="gray">Your cozy guide to everything you need to know on Civilia ✨</p>
+
+            <div class="faq-item">
+                <h3 class="aqua bold">❓ How do I join the server?</h3>
+                <p class="gray">Open Minecraft Java Edition ➜ Click <strong>Multiplayer</strong> ➜ Add Server ➜ Use the
+                    address <span class="copy-box"
+                        onclick="navigator.clipboard.writeText('play.civilia.online')">play.civilia.online</span> 💖</p>
+            </div>
+
+            <div class="faq-item">
+                <h3 class="aqua bold">💌 How do I report an issue or player?</h3>
+                <p class="gray">You can use the in-game mail system by typing:<br>
+                    <code>/mail send Hi_Im_Ben [your message]</code><br>
+                    We check mail often and will get back to you ASAP!
+                </p>
+            </div>
+
+            <div class="faq-item">
+                <h3 class="aqua bold">🌸 I’m new! What should I do first?</h3>
+                <p class="gray">Once you spawn in, feel free to explore, find a cozy spot to build, and use
+                    <code>/gs</code> to get the tools necessary to claim land! Don’t forget to claim your land with
+                    <code>/cl</code> 💫</p>
+            </div>
+
+            <div class="faq-item">
+                <h3 class="aqua bold">💎 What kind of server is Civilia?</h3>
+                <p class="gray">Civilia is a friendly, survival-based Minecraft server focused on creativity, cozy
+                    vibes, and community. No pay-to-win, just chill blocks and cool friends.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3 class="aqua bold">🔐 How do I protect my builds?</h3>
+                <p class="gray">Use <code>/cl</code> to protect your area.
+            </div>
+
+            <div class="faq-item">
+                <h3 class="aqua bold">💬 I have more questions!</h3>
+                <p class="gray">Feel free to <code>/mail Hi_Im_Ben</code> in-game anytime, or check out our YouTube and
+                    Discord (coming soon!) for tutorials and support.</p>
+            </div>
+        </div>
+
+    </section>
+
+    <section id="rules" class="help-rules">
+        <div class="rules">
+            <h2 class="title gold bold">Civilia Survival Server Rules</h2>
+            <p class="gray">Last updated: May 2025</p>
+
+            <p class="gray">Please read carefully. Breaking rules will result in one of the following punishments:</p>
+
+            <h3 class="gold">Punishment Tiers:</h3>
+            <ul>
+                <li><span class="white">Tier 1:</span> <span class="gray">In-game death (admin-initiated kill)</span>
+                </li>
+                <li><span class="white">Tier 2:</span> <span class="gray">Kick from the server</span></li>
+                <li><span class="white">Tier 3:</span> <span class="gray">1-Day Timeout (temporary mute or ban)</span>
+                </li>
+                <li><span class="white">Tier 4:</span> <span class="gray">3-Day Temporary Ban</span></li>
+                <li><span class="white">Tier 5:</span> <span class="gray">Permanent Ban</span></li>
+            </ul>
+
+            <p class="gray"><em>Staff decisions are final.</em></p>
+
+            <hr class="divider" />
+
+            <ul class="rule-list">
+                <li>
+                    <span class="aqua bold">1. No Griefing</span><br>
+                    <span class="gray">Do not destroy or modify other players' builds or terrain.</span><br>
+                    <span class="red">Punishment: Tier 4-5</span>
+                </li>
+                <li>
+                    <span class="aqua bold">2. No Stealing</span><br>
+                    <span class="gray">Do not take items from chests, furnaces, or containers you don’t own.</span><br>
+                    <span class="red">Punishment: Tier 4-5</span>
+                </li>
+                <li>
+                    <span class="aqua bold">3. No Hacked Clients or Cheats</span><br>
+                    <span class="gray">X-ray, fly hacks, kill aura, auto-clickers, etc. are not allowed.</span><br>
+                    <span class="red">Punishment: Tier 5</span>
+                </li>
+                <li>
+                    <span class="aqua bold">4. Respect Claims and Build Boundaries</span><br>
+                    <span class="gray">Do not build too close to or inside another player’s claimed area.</span><br>
+                    <span class="red">Punishment: Tier 2-3</span>
+                </li>
+            </ul>
+
+            <hr class="divider" />
+
+            <ul class="rule-list">
+                <li>
+                    <span class="aqua bold">5. Be Respectful</span><br>
+                    <span class="gray">No harassment, hate speech, racism, or discrimination of any kind.</span><br>
+                    <span class="red">Punishment: Tier 4-5</span>
+                </li>
+                <li>
+                    <span class="aqua bold">6. No Spamming or Advertising</span><br>
+                    <span class="gray">Avoid excessive messages or promoting other servers or websites.</span><br>
+                    <span class="red">Punishment: Tier 3</span>
+                </li>
+                <li>
+                    <span class="aqua bold">7. No Excessive Swearing or Toxicity</span><br>
+                    <span class="gray">Keep chat appropriate and friendly for everyone.</span><br>
+                    <span class="red">Punishment: Tier 2-4</span>
+                </li>
+            </ul>
+
+            <hr class="divider" />
+
+            <p class="gray">Play fair. Respect others. Enjoy Civilia Survival.</p>
+        </div>
+
+    </section>
+    </p>
+    </section>
+
+    <footer>
+        © 2024 Civilia 🍥 Built with 💖 & Rainbows 🌈
+    </footer>
+
+    <script>
+        // Add cute confirmation when copying IP
+        document.querySelector('.address code').addEventListener('click', function () {
+            navigator.clipboard.writeText('play.civilia.online');
+            this.innerHTML = 'Copied! 🌸';
+            setTimeout(() => {
+                this.innerHTML = 'play.civilia.online';
+            }, 1000);
+        });
+    </script>
+</body>
+
+</html>
